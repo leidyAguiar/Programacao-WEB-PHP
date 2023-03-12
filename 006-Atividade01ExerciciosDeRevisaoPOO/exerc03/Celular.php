@@ -1,4 +1,5 @@
 <?php
+
 abstract class Celular extends Telefone {
 
     protected static float $custoMinuto = 1.0; // R$ 1,00 por minuto
@@ -25,7 +26,7 @@ abstract class Celular extends Telefone {
     {
         return self::$custoMinuto * $tempo;
     }
-    
+
     public function __toString(): string
     {
         return "DDD: {$this->ddd} | 

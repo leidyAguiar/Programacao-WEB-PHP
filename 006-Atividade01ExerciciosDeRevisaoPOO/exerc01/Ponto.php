@@ -1,4 +1,5 @@
 <?php
+
 class Ponto {
 
     private int $x;
@@ -11,10 +12,12 @@ class Ponto {
         $this->setY($y);
         self::$contador++;
     }
+
     public function getX()
     {
         return $this->x;
     }
+
     public function getY()
     {
         return $this->y;
@@ -34,24 +37,28 @@ class Ponto {
     {
         return self::$contador;
     }
+
     public function distanciaPonto(Ponto $ponto)
     {
         $dx = $this->x - $ponto->getX();
         $dy = $this->y - $ponto->getY();
         return sqrt(pow($dx, 2) + pow($dy, 2));
     }
+
     public function distanciaCoordenadas(int $x, int $y)
     {
         $dx = $this->x - $x;
         $dy = $this->y - $y;
         return sqrt(pow($dx, 2) + pow($dy, 2));
     }
+
     public static function distanciaPontos(int $x1, int $y1, int $x2, int $y2)
     {
         $dx = $x1 - $x2;
         $dy = $y1 - $y2;
         return sqrt(pow($dx, 2) + pow($dy, 2));
     }
+    
     public function __toString()
     {
         return "X: {$this->x} | Y: {$this->y}";

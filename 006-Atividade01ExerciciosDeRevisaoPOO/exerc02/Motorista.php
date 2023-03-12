@@ -24,7 +24,7 @@ class Motorista extends Funcionario {
     {
         $this->carteiraMotorista = $carteiraMotorista;
     }
-    
+
     public function __toString()
     {
         return "Codigo: {$this->codigo} | 

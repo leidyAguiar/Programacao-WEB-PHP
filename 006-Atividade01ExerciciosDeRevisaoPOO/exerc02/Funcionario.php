@@ -1,16 +1,18 @@
 <?php
 
-class Funcionario
-{
+class Funcionario {
+
     protected String $nome;
     protected int $codigo;
     protected float $salarioBase;
+
     function __construct(String $nome, int $codigo, float $salarioBase)
     {
         $this->nome = $nome;
         $this->codigo = $codigo;
         $this->salarioBase = $salarioBase;
     }
+
     public function getNome(): string
     {
         return $this->nome;
@@ -20,14 +22,17 @@ class Funcionario
     {
         $this->nome = $nome;
     }
+
     public function getCodigo(): int
     {
         return $this->codigo;
     }
+
     public function getSalarioBase(): float
     {
         return $this->salarioBase;
     }
+
     public function setSalarioBase(float $salarioBase): void
     {
         $this->salarioBase = $salarioBase;
@@ -43,10 +48,11 @@ class Funcionario
         }
         return $this->salarioBase - $inss - $ir;
     }
+    
     public function __toString()
     {
-        return "Nome: {$this->nome} | 
-                Codigo: {$this->codigo} | 
+        return "Codigo: {$this->codigo} | 
+                Nome: {$this->nome} | 
                 Salário Base: {$this->salarioBase} | 
                 Salário Liquido: {$this->getSalarioLiquido()}";
     }
